@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using Driving_A_Robot_WPF.ViewModels;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -9,6 +10,16 @@ namespace Driving_A_Robot_WPF
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            MainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel()
+            };
+            MainWindow.Show();
+
+            base.OnStartup(e);
+        }
     }
 
 }

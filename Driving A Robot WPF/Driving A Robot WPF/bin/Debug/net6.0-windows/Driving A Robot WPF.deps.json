@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Driving A Robot WPF/1.0.0": {
+        "runtime": {
+          "Driving A Robot WPF.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Driving A Robot WPF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

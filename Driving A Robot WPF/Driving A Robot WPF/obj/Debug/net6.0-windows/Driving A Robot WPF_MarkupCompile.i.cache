@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\App.xaml
-11407045341
+2-149160085
 
-6951031601
+10-1473577921
 194-428966090
-MainWindow.xaml;
+MainWindow.xaml;Views\InputOutputView.xaml;
 
-False
+True
 

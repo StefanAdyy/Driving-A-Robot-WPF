@@ -1,0 +1,24 @@
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Driving A Robot WPF.exe
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Driving A Robot WPF.deps.json
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Driving A Robot WPF.runtimeconfig.json
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Driving A Robot WPF.dll
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Driving A Robot WPF.pdb
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Views\InputOutputView.g.cs
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF_MarkupCompile.cache
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF_MarkupCompile.lref
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Views\InputOutputView.baml
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.g.resources
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.AssemblyInfoInputs.cache
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.AssemblyInfo.cs
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.sourcelink.json
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.dll
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\refint\Driving A Robot WPF.dll
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.pdb
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.genruntimeconfig.cache
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\ref\Driving A Robot WPF.dll
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
