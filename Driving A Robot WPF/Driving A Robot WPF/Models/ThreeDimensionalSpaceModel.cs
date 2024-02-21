@@ -20,6 +20,7 @@ namespace Driving_A_Robot_WPF.Models
         public RangeModel ZRange { get { return _zRange; } }
 
         public RobotModel ObjectInSpace { get; set; }
+        public PointModel DefaultCoordinates { get; set; }
 
         public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, RobotModel robot = null)
         {
@@ -31,6 +32,8 @@ namespace Driving_A_Robot_WPF.Models
 
         public ThreeDimensionalSpaceModel(string rangesFilePath, RobotModel robot = null)
         {
+            ObjectInSpace = robot;
+
             try
             {
                 List<string> limits = FileUtils.ReadLinesFromFile(rangesFilePath);
@@ -57,7 +60,7 @@ namespace Driving_A_Robot_WPF.Models
                                 break;
 
                             default:
-                                throw new ThreeDimensionalSpaceException.InvalidAxis($"Axis \"{tokens[0]}\" is: INVALID");
+                                throw new ThreeDimensionalSpaceException.InvalidAxis($"Axis \"{tokens[0]}\" is NOT valid.");
                         }
                     }
                     catch (RangeException.InvalidRangeFormatException ex)
@@ -65,8 +68,6 @@ namespace Driving_A_Robot_WPF.Models
                         MessageBox.Show($"An error occured while processing the limits:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
-
-                ObjectInSpace = robot;
             }
             catch (FileOperationException ex)
             {
@@ -79,7 +80,21 @@ namespace Driving_A_Robot_WPF.Models
 
         }
 
-        public void Move(double value, string axis)
+        public void SetObjectDefaultPosition(PointModel defaultCoordinates)
+        {
+            if (ObjectInSpace == null)
+                throw new NullReferenceException("Object to move is not initialized");
+
+            if (ObjectInSpace == null)
+                throw new NullReferenceException("Default coordinates are not initialized");
+
+            if (XRange.HasInRange(defaultCoordinates.X) && YRange.HasInRange(defaultCoordinates.Y) && ZRange.HasInRange(defaultCoordinates.Z)) 
+                throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
+
+            DefaultCoordinates = defaultCoordinates;
+        }
+
+        public void MoveObject(double value, string axis)
         {
             if (ObjectInSpace == null)
                 throw new NullReferenceException("Object to move is not initialized");
@@ -87,30 +102,30 @@ namespace Driving_A_Robot_WPF.Models
             switch (axis.ToLower())
             {
                 case "x":
-                    double computedXValue = ObjectInSpace.XCoordinate + value;
+                    double computedXValue = ObjectInSpace.Coordinates.X + value;
 
                     if (XRange.HasInRange(computedXValue))
-                        ObjectInSpace.XCoordinate = computedXValue;
+                        ObjectInSpace.Coordinates.X = computedXValue;
                     else
-                        throw new ThreeDimensionalSpaceException.ObjectMoveException("Invalid move. Robot would go outside space bounds.");
+                        throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
                     break;
 
                 case "y":
-                    double computedYValue = ObjectInSpace.YCoordinate + value;
+                    double computedYValue = ObjectInSpace.Coordinates.Y + value;
 
                     if (YRange.HasInRange(computedYValue))
-                        ObjectInSpace.YCoordinate = computedYValue;
+                        ObjectInSpace.Coordinates.Y = computedYValue;
                     else
-                        throw new ThreeDimensionalSpaceException.ObjectMoveException("Invalid move. Robot would go outside space bounds.");
+                        throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
                     break;
 
                 case "z":
-                    double computedZValue = ObjectInSpace.ZCoordinate + value;
+                    double computedZValue = ObjectInSpace.Coordinates.Z + value;
 
                     if (ZRange.HasInRange(computedZValue))
-                        ObjectInSpace.ZCoordinate = computedZValue;
+                        ObjectInSpace.Coordinates.Z = computedZValue;
                     else
-                        throw new ThreeDimensionalSpaceException.ObjectMoveException("Invalid move. Robot would go outside space bounds.");
+                        throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
                     break;
 
                 default:
@@ -118,21 +133,21 @@ namespace Driving_A_Robot_WPF.Models
             }
         }
 
-        public void Move(double valueOnX, double valueOnY, double valueOnZ)
+        public void MoveObject(double valueOnX, double valueOnY, double valueOnZ)
         {
             if (ObjectInSpace == null)
                 throw new NullReferenceException("Object to move is not initialized.");
 
-            if (XRange.HasInRange(valueOnX + ObjectInSpace.XCoordinate) &&
-                   YRange.HasInRange(valueOnY + ObjectInSpace.YCoordinate) &&
-                   ZRange.HasInRange(valueOnZ + ObjectInSpace.ZCoordinate))
+            if (XRange.HasInRange(valueOnX + ObjectInSpace.Coordinates.X) &&
+                   YRange.HasInRange(valueOnY + ObjectInSpace.Coordinates.Y) &&
+                   ZRange.HasInRange(valueOnZ + ObjectInSpace.Coordinates.Z))
             {
-                ObjectInSpace.XCoordinate += valueOnX;
-                ObjectInSpace.YCoordinate += valueOnY;
-                ObjectInSpace.ZCoordinate += valueOnZ;
+                ObjectInSpace.Coordinates.X += valueOnX;
+                ObjectInSpace.Coordinates.Y += valueOnY;
+                ObjectInSpace.Coordinates.Z += valueOnZ;
             }
             else
-                throw new ThreeDimensionalSpaceException.ObjectMoveException("Invalid move. Robot would go outside space bounds.");
+                throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
         }
     }
 }
