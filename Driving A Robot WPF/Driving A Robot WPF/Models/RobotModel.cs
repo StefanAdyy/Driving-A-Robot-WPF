@@ -8,47 +8,23 @@ namespace Driving_A_Robot_WPF.Models
 {
     public class RobotModel
     {
-        private double _xCoordinate;
-        private double _yCoordinate;
-        private double _zCoordinate;
+        private PointModel _coordinates;
 
-        public double XCoordinate
+        public PointModel Coordinates
         {
-            get { return _xCoordinate; }
+            get { return _coordinates; }
             set
             {
-                _xCoordinate = value;
-                AreCoordinatesSet = true; 
-            }
-        }
-
-        public double YCoordinate
-        {
-            get { return _yCoordinate; }
-            set
-            {
-                _yCoordinate = value;
-                AreCoordinatesSet = true;
-            }
-        }
-
-        public double ZCoordinate
-        {
-            get { return _zCoordinate; }
-            set
-            {
-                _zCoordinate = value;
+                _coordinates = value;
                 AreCoordinatesSet = true;
             }
         }
 
         public bool AreCoordinatesSet { get; private set; }
 
-        public RobotModel(double xCoordinate, double yCoordinate, double zCoordinate)
+        public RobotModel(PointModel coordinates)
         {
-            XCoordinate = xCoordinate;
-            YCoordinate = yCoordinate;
-            ZCoordinate = zCoordinate;
+            Coordinates = coordinates;
             AreCoordinatesSet = true;
         }
 
@@ -58,7 +34,7 @@ namespace Driving_A_Robot_WPF.Models
             
             if (AreCoordinatesSet)
             {
-                s = XCoordinate.ToString() + " " + YCoordinate.ToString() + " " + ZCoordinate.ToString();
+                s = Coordinates.X.ToString() + " " + Coordinates.Y.ToString() + " " + Coordinates.Z.ToString();
             }
             else
             {
