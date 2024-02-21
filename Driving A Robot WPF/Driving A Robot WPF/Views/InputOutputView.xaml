@@ -16,7 +16,8 @@
                  Grid.Row="0" 
                  VerticalScrollBarVisibility="Auto"
                  TextWrapping="Wrap" 
-                 AcceptsReturn="True">
+                 AcceptsReturn="True"
+                 Text="{Binding Input, UpdateSourceTrigger=PropertyChanged}">
         </TextBox>
 
 
@@ -40,8 +41,8 @@
                            Grid.Row="1"
                            HorizontalAlignment="Stretch"
                            TextAlignment="Left"
-                           Text="Response text/ Error message"
-                           TextWrapping="Wrap">
+                           TextWrapping="Wrap"
+                           Text="{Binding Output, UpdateSourceTrigger=PropertyChanged}">
                 </TextBlock>
             </ScrollViewer>
         </Grid>
