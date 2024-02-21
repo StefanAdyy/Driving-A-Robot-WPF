@@ -10,9 +10,9 @@ namespace Driving_A_Robot_WPF.Exceptions
     {
         public ThreeDimensionalSpaceException(string message) : base(message) { }
 
-        public class ObjectMoveException : ThreeDimensionalSpaceException
+        public class ObjectPositionException : ThreeDimensionalSpaceException
         {
-            public ObjectMoveException(string message) : base(message) { }
+            public ObjectPositionException(string message) : base(message) { }
         }
 
         public class InvalidAxis : ThreeDimensionalSpaceException

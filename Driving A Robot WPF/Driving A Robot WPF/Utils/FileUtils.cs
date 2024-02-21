@@ -19,12 +19,15 @@ namespace Driving_A_Robot_WPF.Utils
             {
                 if (File.Exists(filePath))
                 {
-                    StreamReader reader = new StreamReader(filePath);
-                    string line;
-
-                    while ((line = reader.ReadLine()) != null)
+                    using (StreamReader sr = new StreamReader(filePath))
                     {
-                        lines.Add(line);
+                        string line = sr.ReadLine();
+
+                        while (line != null)
+                        {
+                            lines.Add(line);
+                            line = sr.ReadLine();
+                        }
                     }
                 }
                 else
