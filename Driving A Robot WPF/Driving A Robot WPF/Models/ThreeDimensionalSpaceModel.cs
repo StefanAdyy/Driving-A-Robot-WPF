@@ -65,19 +65,16 @@ namespace Driving_A_Robot_WPF.Models
                     }
                     catch (RangeException.InvalidRangeFormatException ex)
                     {
-                        MessageBox.Show($"An error occured while processing the limits:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
+                        throw new RangeException.InvalidRangeFormatException(ex.Message);
+                        //MessageBox.Show($"An error occured while processing the limits:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
             catch (FileOperationException ex)
             {
-                MessageBox.Show($"An exception was thrown while reading the file:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
+                throw new FileOperationException(ex.Message);
+                //MessageBox.Show($"An exception was thrown while reading the file:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An unexpected exception occured:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-
         }
 
         public void SetObjectDefaultPosition(PointModel defaultCoordinates)

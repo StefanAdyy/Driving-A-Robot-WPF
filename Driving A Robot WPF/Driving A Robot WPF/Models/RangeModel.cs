@@ -34,7 +34,7 @@ namespace Driving_A_Robot_WPF.Models
 
             if (values.Length != 2)
             {
-                throw new RangeException.InvalidRangeFormatException("String does not contain the right data.");
+                throw new RangeException.InvalidRangeFormatException("String does not contain data in a right way.");
             }
 
             if (double.TryParse(values[0], out double minValue) && double.TryParse(values[1], out double maxValue))

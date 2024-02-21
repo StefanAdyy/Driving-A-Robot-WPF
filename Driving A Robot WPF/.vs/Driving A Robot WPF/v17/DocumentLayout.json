@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\threedimensionalspacemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\exceptions\\threedimensionalspaceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\exceptions\\threedimensionalspaceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\models\\rangemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\rangemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -50,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Logger.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Utils\\Logger.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Utils\\Logger.cs",
@@ -68,14 +64,14 @@
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
               "RelativeToolTip": "Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAA2wGgAAAA7AAAA",
+              "ViewState": "AQIAAD0AAAAAAAAAAAASwE0AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T09:26:16.552Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FileUtils.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Utils\\FileUtils.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Utils\\FileUtils.cs",
@@ -87,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "3DSpaceLimits.txt",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Assets\\3DSpaceLimits.txt",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Assets\\3DSpaceLimits.txt",
@@ -99,31 +95,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "RangeModel.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\RangeModel.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Models\\RangeModel.cs",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\RangeModel.cs",
               "RelativeToolTip": "Driving A Robot WPF\\Models\\RangeModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAeAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAIwCQAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T14:26:48.026Z"
+              "WhenOpened": "2024-02-21T14:26:48.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ThreeDimensionalSpaceException.cs",
-              "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "RelativeDocumentMoniker": "Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "RelativeToolTip": "Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T14:10:44.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\MainWindow.xaml.cs",
@@ -135,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "RangeException.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Exceptions\\RangeException.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Exceptions\\RangeException.cs",
