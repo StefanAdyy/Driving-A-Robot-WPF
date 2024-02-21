@@ -22,6 +22,11 @@ namespace Driving_A_Robot_WPF.Models
             MaxValue = maxValue;
         }
 
+        public bool HasInRange(double value)
+        {
+            return MinValue <= value && value <= MaxValue;
+        }
+
         public static RangeModel GetRangeFromString(string valuesString)
         {
             string[] values = valuesString.Split(' ');

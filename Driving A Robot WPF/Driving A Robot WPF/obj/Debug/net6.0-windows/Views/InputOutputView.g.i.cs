@@ -69,7 +69,7 @@ namespace Driving_A_Robot_WPF.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Driving A Robot WPF;V1.0.0.0;component/views/inputoutputview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Driving A Robot WPF;component/views/inputoutputview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\InputOutputView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

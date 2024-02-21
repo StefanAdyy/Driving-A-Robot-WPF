@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Driving_A_Robot_WPF.Models
 {
-    public class Robot
+    public class RobotModel
     {
         private double _xCoordinate;
         private double _yCoordinate;
@@ -44,7 +44,7 @@ namespace Driving_A_Robot_WPF.Models
 
         public bool AreCoordinatesSet { get; private set; }
 
-        public Robot(double xCoordinate, double yCoordinate, double zCoordinate)
+        public RobotModel(double xCoordinate, double yCoordinate, double zCoordinate)
         {
             XCoordinate = xCoordinate;
             YCoordinate = yCoordinate;

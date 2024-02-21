@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Driving_A_Robot_WPF.Utils
 {
@@ -15,9 +16,16 @@ namespace Driving_A_Robot_WPF.Utils
 
             try
             {
+                string relativePath = AppDomain.CurrentDomain.BaseDirectory;
                 if (File.Exists(filePath))
                 {
-                    lines.AddRange(File.ReadAllLines(filePath));
+                    StreamReader reader = new StreamReader(filePath);
+                    string line;
+
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
                 }
                 else
                 {

@@ -17,9 +17,9 @@ namespace Driving_A_Robot_WPF.Models
         public RangeModel YRange { get { return _yRange; } }
         public RangeModel ZRange { get { return _zRange; } }
 
-        public Robot ObjectInSpace { get; set; }
+        public RobotModel ObjectInSpace { get; set; }
 
-        public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, Robot robot = null)
+        public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, RobotModel robot = null)
         {
             _xRange = xRange;
             _yRange = yRange;
@@ -27,7 +27,7 @@ namespace Driving_A_Robot_WPF.Models
             ObjectInSpace = robot;
         }
 
-        public ThreeDimensionalSpaceModel(string rangesFilePath, Robot robot = null)
+        public ThreeDimensionalSpaceModel(string rangesFilePath, RobotModel robot = null)
         {
             List<string> limits = FileUtils.ReadLinesFromFile(rangesFilePath);
 
@@ -66,7 +66,51 @@ namespace Driving_A_Robot_WPF.Models
             ObjectInSpace = robot;
         }
 
+        public string Move(double value, string axis)
+        {
+            string message = "";
 
+            if (ObjectInSpace == null)
+                message = "Object to move is not initialized";
+            else
+            {
+                switch (axis.ToLower())
+                {
+                    case "x":
+                        double computedXValue = ObjectInSpace.XCoordinate + value;
+                        
+                        if(XRange.HasInRange(computedXValue))
+                            ObjectInSpace.XCoordinate = computedXValue;
+                        else
+                            message = "Invalid move. Robot would go outside space bounds.";
+                    break;
+
+                    case "y":
+                        double computedYValue = ObjectInSpace.YCoordinate + value;
+
+                        if (YRange.HasInRange(computedYValue))
+                            ObjectInSpace.YCoordinate = computedYValue;
+                        else
+                            message = "Invalid move. Robot would go outside space bounds.";
+                        break;
+
+                    case "z":
+                        double computedZValue = ObjectInSpace.ZCoordinate + value;
+
+                        if (ZRange.HasInRange(computedZValue))
+                            ObjectInSpace.ZCoordinate = computedZValue;
+                        else
+                            message = "Invalid move. Robot would go outside space bounds.";
+                        break;
+
+                    default:
+                        message = $"Input axis \"{axis}\" is: INVALID";
+                        break;
+                }
+            }
+
+            return message;
+        }
 
     }
 }
