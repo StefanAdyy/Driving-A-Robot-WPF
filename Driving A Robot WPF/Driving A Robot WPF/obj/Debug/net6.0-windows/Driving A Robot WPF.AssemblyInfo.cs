@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Driving A Robot WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b29abfa6c047eb8e9eb57bce8dd1871f85a7504e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db9cd951ee44cc8db72aadade40a3af1905f42a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Driving A Robot WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Driving A Robot WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

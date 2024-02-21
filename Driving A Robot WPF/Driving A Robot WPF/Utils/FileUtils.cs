@@ -1,5 +1,4 @@
-﻿using Driving_A_Robot_WPF.Exceptions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,6 +16,7 @@ namespace Driving_A_Robot_WPF.Utils
 
             try
             {
+                string relativePath = AppDomain.CurrentDomain.BaseDirectory;
                 if (File.Exists(filePath))
                 {
                     StreamReader reader = new StreamReader(filePath);
@@ -29,12 +29,12 @@ namespace Driving_A_Robot_WPF.Utils
                 }
                 else
                 {
-                    throw new FileOperationException.FileNotFoundException(filePath);
+                    Console.WriteLine($"File not found: {filePath}");
                 }
             }
             catch (Exception ex)
             {
-                throw new FileOperationException.FileReadingException(ex.Message);
+                Console.WriteLine($"An error occurred while reading from the file: {ex.Message}");
             }
 
             return lines;
