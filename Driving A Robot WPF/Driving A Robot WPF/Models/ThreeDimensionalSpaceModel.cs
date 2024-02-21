@@ -112,5 +112,27 @@ namespace Driving_A_Robot_WPF.Models
             return message;
         }
 
+        public string Move(double valueOnX, double valueOnY, double valueOnZ)
+        {
+            string message = "";
+
+            if (ObjectInSpace == null)
+                message = "Object to move is not initialized";
+            else
+            {
+                if (XRange.HasInRange(valueOnX + ObjectInSpace.XCoordinate) &&
+                   YRange.HasInRange(valueOnY + ObjectInSpace.YCoordinate) &&
+                   ZRange.HasInRange(valueOnZ + ObjectInSpace.ZCoordinate))
+                {
+                    ObjectInSpace.XCoordinate += valueOnX;
+                    ObjectInSpace.YCoordinate += valueOnY;
+                    ObjectInSpace.ZCoordinate += valueOnZ;
+                }
+                else
+                    message = "Invalid move. Robot would go outside space bounds.";
+            }
+
+            return message;
+        }
     }
 }
