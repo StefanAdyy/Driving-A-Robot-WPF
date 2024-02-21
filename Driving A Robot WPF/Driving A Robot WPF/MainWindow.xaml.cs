@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Driving_A_Robot_WPF.Exceptions;
+using Driving_A_Robot_WPF.Models;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,6 +20,20 @@ namespace Driving_A_Robot_WPF
     {
         public MainWindow()
         {
+            RobotModel robot = new RobotModel(0, 1, 2);
+            robot.ToString();
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            try
+            {
+                string filePath = currentDirectory + @"..\..\..\Assets\3DSpaceLimits.txt";
+                ThreeDimensionalSpaceModel threeDimensionalSpaceModel = new ThreeDimensionalSpaceModel (filePath, robot);
+                threeDimensionalSpaceModel.Move(2000, "y");
+            }
+            catch (ThreeDimensionalSpaceException ex)
+            {
+                string s = ex.Message;
+            }
+
             InitializeComponent();
         }
     }
