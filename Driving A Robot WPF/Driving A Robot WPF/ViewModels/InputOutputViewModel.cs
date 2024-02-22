@@ -21,12 +21,13 @@ namespace Driving_A_Robot_WPF.ViewModels
 			{
                 _consoleInput = value;
 				ConsoleHistory += $"\n{value}";
+				Output += value;
 
                 OnPropertyChanged(nameof(ConsoleInput));
 			}
 		}
 
-		private string _output;
+		private string _output = "";
 		public string Output
 		{
 			get

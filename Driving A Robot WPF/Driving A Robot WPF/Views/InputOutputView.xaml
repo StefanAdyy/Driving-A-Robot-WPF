@@ -36,7 +36,8 @@
                          FontFamily="Consolas"
                          Background="LightGray"
                          Text="{Binding ConsoleHistory, UpdateSourceTrigger=PropertyChanged}" 
-                         GotFocus="ConsoleHistoryTextBox_GotFocus"/>
+                         GotFocus="ConsoleHistoryTextBox_GotFocus" 
+                         TextChanged="ConsoleHistoryTextBox_TextChanged"/>
 
                 <TextBox x:Name="ConsoleInputTextBox" 
                          Grid.Row="1"
@@ -77,16 +78,14 @@
                     Background="Orange"
                     Padding="5">
 
-                <ScrollViewer MinHeight="60"
-                              Height="auto"
-                              HorizontalScrollBarVisibility="Disabled" 
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" 
                               VerticalScrollBarVisibility="Auto">
                     
                     <TextBlock x:Name="MessageOutputTextBlock"
-                               Grid.Row="1"
                                HorizontalAlignment="Stretch"
-                               TextAlignment="Left"
+                               TextAlignment="Center"
                                TextWrapping="Wrap"
+                               FontWeight="Bold"
                                Text="{Binding Output, UpdateSourceTrigger=PropertyChanged}">
                     </TextBlock>
                     

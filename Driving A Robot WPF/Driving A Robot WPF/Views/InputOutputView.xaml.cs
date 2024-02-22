@@ -28,5 +28,10 @@ namespace Driving_A_Robot_WPF.Views
         {
             ConsoleInputTextBox.Focus();
         }
+
+        private void ConsoleHistoryTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ConsoleHistoryTextBox.ScrollToEnd();
+        }
     }
 }
