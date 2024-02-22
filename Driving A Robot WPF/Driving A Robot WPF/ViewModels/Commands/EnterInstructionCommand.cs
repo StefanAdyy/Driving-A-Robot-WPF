@@ -26,7 +26,8 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
 
             if (!string.IsNullOrWhiteSpace(_viewModel.ConsoleInput))
             {
-                string[] commandTokens = _viewModel.ConsoleInput.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+                char[] delimiterChars = { ' ', ',', '.', '\t' };
+                string[] commandTokens = _viewModel.ConsoleInput.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
 
                 switch (commandTokens[0].ToLower())
                 {
@@ -35,7 +36,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                         break;
 
                     case "help":
-                        responseMessage = "Available commands: QUIT, SET(x, y, z), RESET, MOVE (axis, value), 3DMOVE(ValueOnX, ValueOnY, ValueOnZ), PRINT";
+                        responseMessage = "Available commands: QUIT | SET x, y, z | RESET | MOVE axis, value | 3DMOVE ValueOnX, ValueOnY, ValueOnZ | PRINT";
                         break;
 
                     case "print":
@@ -69,7 +70,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
 
                                 if (double.TryParse(commandTokens[1], out value))
                                 {
-                                    _threeDimensionalSpace.MoveObject(value, commandTokens[1]);
+                                    _threeDimensionalSpace.MoveObject(value, commandTokens[2]);
                                 }
                                 else
                                 {
@@ -80,7 +81,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             }
                             catch (ThreeDimensionalSpaceException.ObjectNullException ex)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x y z before.";
+                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
@@ -130,7 +131,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             }
                             catch (ThreeDimensionalSpaceException.ObjectNullException ex)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x y z before.";
+                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
@@ -204,19 +205,15 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             {
                                 _threeDimensionalSpace.ResetObjectPosition();
                             }
-                            catch (NullReferenceException ex)
-                            {
-                                Utils.Logger.LogError("Object to move does not exist");
-                            }
                             catch (ThreeDimensionalSpaceException.ObjectNullException ex)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x y z before.";
+                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
                             catch (ThreeDimensionalSpaceException.UnsetDefaultCoordinates ex)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x y z before.";
+                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }

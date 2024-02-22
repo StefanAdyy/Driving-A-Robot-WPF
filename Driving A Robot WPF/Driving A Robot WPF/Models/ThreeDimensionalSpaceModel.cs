@@ -15,13 +15,14 @@ namespace Driving_A_Robot_WPF.Models
         private RangeModel _xRange;
         private RangeModel _yRange;
         private RangeModel _zRange;
+        private PointModel _defaultCoordinates;
 
         public RangeModel XRange { get { return _xRange; } }
         public RangeModel YRange { get { return _yRange; } }
         public RangeModel ZRange { get { return _zRange; } }
+        public PointModel DefaultCoordinates { get { return _defaultCoordinates; } }
 
         public RobotModel ObjectInSpace { get; set; }
-        public PointModel DefaultCoordinates { get; set; }
 
         public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, RobotModel robot = null)
         {
@@ -95,7 +96,7 @@ namespace Driving_A_Robot_WPF.Models
             if (!XRange.HasInRange(defaultCoordinates.X) || !YRange.HasInRange(defaultCoordinates.Y) || !ZRange.HasInRange(defaultCoordinates.Z)) 
                 throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
 
-            DefaultCoordinates = defaultCoordinates;
+            _defaultCoordinates = defaultCoordinates;
             ObjectInSpace.Coordinates = DefaultCoordinates;
         }
 

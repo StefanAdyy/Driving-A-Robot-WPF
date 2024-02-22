@@ -7,32 +7,28 @@
       "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\viewmodels\\commands\\enterinstructioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\models\\threedimensionalspacemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\threedimensionalspacemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\views\\inputoutputview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\views\\inputoutputview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\viewmodels\\inputoutputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\viewmodels\\inputoutputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\exceptions\\threedimensionalspaceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\exceptions\\threedimensionalspaceexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\models\\rangemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\rangemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\models\\pointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\pointmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\viewmodels\\inputoutputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\viewmodels\\inputoutputviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\models\\threedimensionalspacemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\models\\threedimensionalspacemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|c:\\users\\stefa\\desktop\\projects\\driving-a-robot-wpf\\driving a robot wpf\\driving a robot wpf\\views\\inputoutputview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2482DC86-EC00-4086-8476-AA1E6F0B2BA6}|Driving A Robot WPF\\Driving A Robot WPF.csproj|solutionrelative:driving a robot wpf\\views\\inputoutputview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,20 +46,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ThreeDimensionalSpaceException.cs",
-              "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "RelativeDocumentMoniker": "Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "RelativeToolTip": "Driving A Robot WPF\\Exceptions\\ThreeDimensionalSpaceException.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAmAAAA",
+              "DocumentIndex": 3,
+              "Title": "PointModel.cs",
+              "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\PointModel.cs",
+              "RelativeDocumentMoniker": "Driving A Robot WPF\\Models\\PointModel.cs",
+              "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\PointModel.cs",
+              "RelativeToolTip": "Driving A Robot WPF\\Models\\PointModel.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA8wBQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T19:32:29.619Z",
+              "WhenOpened": "2024-02-22T20:32:14.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "RangeModel.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\RangeModel.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Models\\RangeModel.cs",
@@ -71,31 +67,32 @@
               "RelativeToolTip": "Driving A Robot WPF\\Models\\RangeModel.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAswBsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T15:34:35.845Z"
+              "WhenOpened": "2024-02-22T15:34:35.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\App.xaml.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\App.xaml.cs",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\App.xaml.cs",
               "RelativeToolTip": "Driving A Robot WPF\\App.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAswBYAAAArAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T14:10:25.762Z"
+              "WhenOpened": "2024-02-22T14:10:25.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "InputOutputView.xaml",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Views\\InputOutputView.xaml",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Views\\InputOutputView.xaml",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Views\\InputOutputView.xaml",
               "RelativeToolTip": "Driving A Robot WPF\\Views\\InputOutputView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-02-22T12:09:01.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-22T12:09:01.318Z"
             },
             {
               "$type": "Document",
@@ -105,27 +102,27 @@
               "RelativeDocumentMoniker": "Driving A Robot WPF\\ViewModels\\Commands\\EnterInstructionCommand.cs",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\ViewModels\\Commands\\EnterInstructionCommand.cs",
               "RelativeToolTip": "Driving A Robot WPF\\ViewModels\\Commands\\EnterInstructionCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAvAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAA5wB8AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T10:02:23.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ThreeDimensionalSpaceModel.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
               "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
               "RelativeToolTip": "Driving A Robot WPF\\Models\\ThreeDimensionalSpaceModel.cs",
-              "ViewState": "AQIAAHoAAAAAAAAAAADwv5MAAAAeAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAewFoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T10:34:50.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "InputOutputViewModel.cs",
               "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\ViewModels\\InputOutputViewModel.cs",
               "RelativeDocumentMoniker": "Driving A Robot WPF\\ViewModels\\InputOutputViewModel.cs",
@@ -135,18 +132,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-22T13:12:22.393Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "Driving A Robot WPF\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "Driving A Robot WPF\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAjwA8AAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T14:10:18.825Z"
             }
           ]
         }
