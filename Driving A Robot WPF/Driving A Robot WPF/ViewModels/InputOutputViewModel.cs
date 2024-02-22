@@ -1,25 +1,28 @@
-﻿using System;
+﻿using Driving_A_Robot_WPF.ViewModels.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace Driving_A_Robot_WPF.ViewModels
 {
     public class InputOutputViewModel : ViewModelBase
     {
-		private string _input;
-		public string Input
+		private string _consoleInput;
+		public string ConsoleInput
 		{
 			get
 			{
-				return _input;
+				return _consoleInput;
 			}
 			set
 			{
-				_input = value;
-				//Output = value;
-				OnPropertyChanged(nameof(Input));
+                _consoleInput = value;
+				ConsoleHistory += $"\n{value}";
+
+                OnPropertyChanged(nameof(ConsoleInput));
 			}
 		}
 
@@ -36,5 +39,33 @@ namespace Driving_A_Robot_WPF.ViewModels
 				OnPropertyChanged(nameof(Output));
 			}
 		}
-	}
+
+		private string _consoleHistory = "";
+		public string ConsoleHistory
+		{
+			get
+			{
+				return _consoleHistory;
+			}
+			set
+			{
+				_consoleHistory = value;
+				OnPropertyChanged(nameof(ConsoleHistory));
+			}
+		}
+
+        public ICommand EnterCommand { get; }
+		public InputOutputViewModel()
+		{
+			EnterCommand = new EnterInstructionCommand();
+		}
+    //    private void OnEnter()
+    //    {
+    //        if (!string.IsNullOrWhiteSpace(ConsoleInput))
+    //        {
+				//ConsoleHistory += $"\n{ConsoleInput}";
+    //            ConsoleInput = string.Empty;
+    //        }
+    //    }
+    }
 }
