@@ -47,7 +47,7 @@
                          AcceptsReturn="True"
                          FontFamily="Consolas"
                          Background="LightGray"
-                         Text="{Binding ConsoleInput, UpdateSourceTrigger=Explicit}">
+                         Text="{Binding ConsoleInput, UpdateSourceTrigger=PropertyChanged}">
                     
                     <TextBox.InputBindings>
                         <KeyBinding Command="{Binding EnterCommand}" Key="Return"/>

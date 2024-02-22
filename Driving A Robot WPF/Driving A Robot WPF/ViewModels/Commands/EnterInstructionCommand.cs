@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Driving_A_Robot_WPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,22 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
 {
     class EnterInstructionCommand : CommandBase
     {
-        public override void Execute(object? parameter)
+        private ThreeDimensionalSpaceModel _threeDimensionalSpace;
+        private InputOutputViewModel _viewModel;
+        public EnterInstructionCommand(ThreeDimensionalSpaceModel threeDimensionalSpace, InputOutputViewModel viewModel)
         {
-            throw new NotImplementedException();
+            _threeDimensionalSpace = threeDimensionalSpace;
+            _viewModel = viewModel;
+        }
+
+        public override void Execute(object parameter)
+        {
+            if (!string.IsNullOrWhiteSpace(_viewModel.ConsoleInput))
+            {
+                _viewModel.ConsoleHistory += $"\n{_viewModel.ConsoleInput}";
+                _viewModel.ConsoleInput = string.Empty;
+            }
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Driving_A_Robot_WPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace Driving_A_Robot_WPF.ViewModels
     {
         public ViewModelBase CurrentViewModel { get; }
 
-        public MainViewModel() 
+        public MainViewModel(ThreeDimensionalSpaceModel threeDimensionalSpaceModel) 
         {
-            CurrentViewModel = new InputOutputViewModel();
+            CurrentViewModel = new InputOutputViewModel(threeDimensionalSpaceModel);
         }
 
     }

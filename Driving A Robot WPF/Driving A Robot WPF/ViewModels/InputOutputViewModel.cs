@@ -1,4 +1,5 @@
-﻿using Driving_A_Robot_WPF.ViewModels.Commands;
+﻿using Driving_A_Robot_WPF.Models;
+using Driving_A_Robot_WPF.ViewModels.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,6 @@ namespace Driving_A_Robot_WPF.ViewModels
 			set
 			{
                 _consoleInput = value;
-				ConsoleHistory += $"\n{value}";
-				Output += value;
-
                 OnPropertyChanged(nameof(ConsoleInput));
 			}
 		}
@@ -56,17 +54,10 @@ namespace Driving_A_Robot_WPF.ViewModels
 		}
 
         public ICommand EnterCommand { get; }
-		public InputOutputViewModel()
+
+		public InputOutputViewModel(ThreeDimensionalSpaceModel threeDimensionalSpaceModel)
 		{
-			EnterCommand = new EnterInstructionCommand();
+			EnterCommand = new EnterInstructionCommand(threeDimensionalSpaceModel, this);
 		}
-    //    private void OnEnter()
-    //    {
-    //        if (!string.IsNullOrWhiteSpace(ConsoleInput))
-    //        {
-				//ConsoleHistory += $"\n{ConsoleInput}";
-    //            ConsoleInput = string.Empty;
-    //        }
-    //    }
     }
 }

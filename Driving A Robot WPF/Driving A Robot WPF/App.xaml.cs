@@ -12,21 +12,15 @@ namespace Driving_A_Robot_WPF
     /// </summary>
     public partial class App : Application
     {
-        protected override void OnStartup(StartupEventArgs e)
+        private readonly ThreeDimensionalSpaceModel _threeDimensionalSpaceModel;
+
+        public App()
         {
             try
             {
-
                 string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string filePath = currentDirectory + @"..\..\..\Assets\3DSpaceLimits.txt";
                 ThreeDimensionalSpaceModel threeDimensionalSpaceModel = new ThreeDimensionalSpaceModel(filePath);
-
-                MainWindow = new MainWindow()
-                {
-                    DataContext = new MainViewModel()
-                };
-
-                MainWindow.Show();
             }
             catch (FileOperationException ex)
             {
@@ -42,7 +36,7 @@ namespace Driving_A_Robot_WPF
 
                 Shutdown();
             }
-            catch(ThreeDimensionalSpaceException.InvalidAxis ex)
+            catch (ThreeDimensionalSpaceException.InvalidAxis ex)
             {
                 //Utils.Logger.LogError(ex.Message);
                 MessageBox.Show($"A wrong axis was given in the file:\n\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -56,9 +50,16 @@ namespace Driving_A_Robot_WPF
 
                 Shutdown();
             }
+        }
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            MainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel(_threeDimensionalSpaceModel)
+            };
+            MainWindow.Show();
 
             base.OnStartup(e);
         }
     }
-
 }
