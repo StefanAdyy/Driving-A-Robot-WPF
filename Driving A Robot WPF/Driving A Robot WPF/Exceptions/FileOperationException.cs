@@ -19,5 +19,6 @@ namespace Driving_A_Robot_WPF.Exceptions
         {
             public FileReadingException(string message) : base(message) { }
         }
+
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -38,11 +39,22 @@ namespace Driving_A_Robot_WPF.Models
             {
                 List<string> limits = FileUtils.ReadLinesFromFile(rangesFilePath);
 
+                if(limits.Count != 3) 
+                {
+                    throw new RangeException.InvalidRangeFormatException("The file that should contain 3 lines with the axis and their limits");
+                }
+
                 foreach (string limit in limits)
                 {
                     try
                     {
-                        string[] tokens = limit.Split(' ');
+                        string[] tokens = Regex.Split(limit, @" +");
+
+                        if (tokens.Length != 3)
+                        {
+                            throw new RangeException.InvalidRangeFormatException($"Invalid range input. It should respect the following format:\n \"x 1 2\" (axis value value)\n \"y 1 2\" (axis value value)\n \"z 1 2\" (axis value value)");
+                        }
+
                         RangeModel range = RangeModel.GetRangeFromString(tokens[1] + " " + tokens[2]);
 
                         switch (tokens[0].ToLower())
@@ -66,14 +78,12 @@ namespace Driving_A_Robot_WPF.Models
                     catch (RangeException.InvalidRangeFormatException ex)
                     {
                         throw new RangeException.InvalidRangeFormatException(ex.Message);
-                        //MessageBox.Show($"An error occured while processing the limits:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
             catch (FileOperationException ex)
             {
                 throw new FileOperationException(ex.Message);
-                //MessageBox.Show($"An exception was thrown while reading the file:\n{ex.Message}", "Ooops..", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
