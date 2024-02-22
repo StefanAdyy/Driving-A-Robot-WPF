@@ -26,7 +26,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
 
             if (!string.IsNullOrWhiteSpace(_viewModel.ConsoleInput))
             {
-                char[] delimiterChars = { ' ', ',', '.', '\t' };
+                char[] delimiterChars = { ' ', ',', '\t' };
                 string[] commandTokens = _viewModel.ConsoleInput.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
 
                 switch (commandTokens[0].ToLower())
