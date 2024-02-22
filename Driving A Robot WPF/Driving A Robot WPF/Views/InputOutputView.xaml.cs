@@ -24,5 +24,9 @@ namespace Driving_A_Robot_WPF.Views
         {
             InitializeComponent();
         }
+        private void ConsoleHistoryTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            ConsoleInputTextBox.Focus();
+        }
     }
 }
