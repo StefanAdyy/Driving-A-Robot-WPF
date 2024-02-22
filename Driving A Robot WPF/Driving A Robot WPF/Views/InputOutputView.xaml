@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Driving_A_Robot_WPF.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="550" d:DesignWidth="800"
              Background="DimGray">
     <Grid Margin="20 20"
           Background="DimGray">
@@ -60,7 +60,7 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Row="0"
@@ -72,6 +72,7 @@
             </TextBlock>
             
             <Border Grid.Row="1"
+                    MinHeight="40"
                     BorderThickness="3"
                     CornerRadius="10"
                     BorderBrush="DarkGray"
@@ -83,6 +84,7 @@
                     
                     <TextBlock x:Name="MessageOutputTextBlock"
                                HorizontalAlignment="Stretch"
+                               VerticalAlignment="Center"
                                TextAlignment="Center"
                                TextWrapping="Wrap"
                                FontWeight="Bold"

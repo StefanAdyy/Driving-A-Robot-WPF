@@ -28,17 +28,19 @@ namespace Driving_A_Robot_WPF.Models
             AreCoordinatesSet = true;
         }
 
+        public RobotModel() { }
+
         public override string ToString()
         {
             string s;
-            
+
             if (AreCoordinatesSet)
             {
                 s = Coordinates.X.ToString() + " " + Coordinates.Y.ToString() + " " + Coordinates.Z.ToString();
             }
             else
             {
-                s = "??? ??? ???";   
+                s = "??? ??? ???";
             }
 
             return s;

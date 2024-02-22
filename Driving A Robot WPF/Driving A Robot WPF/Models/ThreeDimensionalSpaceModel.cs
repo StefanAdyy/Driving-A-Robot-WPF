@@ -92,13 +92,11 @@ namespace Driving_A_Robot_WPF.Models
             if (ObjectInSpace == null)
                 throw new NullReferenceException("Object to move is not initialized");
 
-            if (DefaultCoordinates == null)
-                throw new NullReferenceException("Default coordinates are not initialized");
-
-            if (XRange.HasInRange(defaultCoordinates.X) && YRange.HasInRange(defaultCoordinates.Y) && ZRange.HasInRange(defaultCoordinates.Z)) 
+            if (!XRange.HasInRange(defaultCoordinates.X) || !YRange.HasInRange(defaultCoordinates.Y) || !ZRange.HasInRange(defaultCoordinates.Z)) 
                 throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
 
             DefaultCoordinates = defaultCoordinates;
+            ObjectInSpace.Coordinates = DefaultCoordinates;
         }
 
         public void ResetObjectPosition()

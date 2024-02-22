@@ -20,7 +20,7 @@ namespace Driving_A_Robot_WPF
             {
                 string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string filePath = currentDirectory + @"..\..\..\Assets\3DSpaceLimits.txt";
-                ThreeDimensionalSpaceModel threeDimensionalSpaceModel = new ThreeDimensionalSpaceModel(filePath);
+                _threeDimensionalSpaceModel = new ThreeDimensionalSpaceModel(filePath);
             }
             catch (FileOperationException ex)
             {

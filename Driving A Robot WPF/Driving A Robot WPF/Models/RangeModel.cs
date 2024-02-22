@@ -25,7 +25,12 @@ namespace Driving_A_Robot_WPF.Models
 
         public bool HasInRange(double value)
         {
-            return MinValue <= value && value <= MaxValue;
+            if(value >= MinValue && value <= MaxValue) 
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public static RangeModel GetRangeFromString(string valuesString)
