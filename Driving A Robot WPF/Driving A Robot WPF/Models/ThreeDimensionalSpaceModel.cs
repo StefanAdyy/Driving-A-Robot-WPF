@@ -90,7 +90,7 @@ namespace Driving_A_Robot_WPF.Models
         public void SetObjectDefaultPosition(PointModel defaultCoordinates)
         {
             if (ObjectInSpace == null)
-                throw new NullReferenceException("Object to move is not initialized");
+                throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized");
 
             if (!XRange.HasInRange(defaultCoordinates.X) || !YRange.HasInRange(defaultCoordinates.Y) || !ZRange.HasInRange(defaultCoordinates.Z)) 
                 throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
@@ -102,10 +102,10 @@ namespace Driving_A_Robot_WPF.Models
         public void ResetObjectPosition()
         {
             if (ObjectInSpace == null)
-                throw new NullReferenceException("Object to move is not initialized");
+                throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized");
 
             if (DefaultCoordinates == null)
-                throw new NullReferenceException("Default coordinates are not initialized");
+                throw new ThreeDimensionalSpaceException.UnsetDefaultCoordinates("Default coordinates are not initialized");
 
             ObjectInSpace.Coordinates = DefaultCoordinates;
         }
@@ -113,7 +113,7 @@ namespace Driving_A_Robot_WPF.Models
         public void MoveObject(double value, string axis)
         {
             if (ObjectInSpace == null)
-                throw new NullReferenceException("Object to move is not initialized");
+                throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized");
 
             switch (axis.ToLower())
             {
@@ -152,7 +152,7 @@ namespace Driving_A_Robot_WPF.Models
         public void MoveObject(double valueOnX, double valueOnY, double valueOnZ)
         {
             if (ObjectInSpace == null)
-                throw new NullReferenceException("Object to move is not initialized.");
+                throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized.");
 
             if (XRange.HasInRange(valueOnX + ObjectInSpace.Coordinates.X) &&
                    YRange.HasInRange(valueOnY + ObjectInSpace.Coordinates.Y) &&

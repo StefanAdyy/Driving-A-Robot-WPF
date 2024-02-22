@@ -1,20 +1,11 @@
-2/22/2024 5:06:38 PM - Error: Invalid command: "System.String[]"
-2/22/2024 5:07:35 PM - Error: Invalid command: "set"
-2/22/2024 5:07:43 PM - Error: Invalid command: "set x"
-2/22/2024 5:08:05 PM - Error: Invalid command: "set x y"
-2/22/2024 5:08:13 PM - Error: Invalid command: "set x y"
-2/22/2024 5:08:35 PM - Error: Invalid command: "set x y x y"
-2/22/2024 5:08:59 PM - Error: Invalid command: "set 2 3"
-2/22/2024 5:09:20 PM - Error: Invalid command: "set 2 3"
-2/22/2024 5:09:38 PM - Error: Invalid command: "set 2"
-2/22/2024 5:09:41 PM - Error: Invalid command: "set 2 3"
-2/22/2024 5:09:47 PM - Error: Invalid command: "set 2  3"
-2/22/2024 5:21:07 PM - Error: Invalid command: "set"
-2/22/2024 5:21:13 PM - Error: Invalid command: "set 2    3 4 5"
-2/22/2024 5:21:18 PM - Error: Invalid command: "set 2 3    "
-2/22/2024 5:24:25 PM - Error: Invalid command: "set x y z"
-2/22/2024 5:35:40 PM - Error: Unknown command: "ste" Type "Help" to see a list of available commands.
-2/22/2024 5:39:26 PM - Error: Wrong coordonates. Object would be placed out of bounds. Command: "set -101 1 1"
-2/22/2024 5:43:30 PM - Error: Invalid command: "set a c 1"
-2/22/2024 5:43:33 PM - Error: Invalid command: "set 1 2"
-2/22/2024 5:44:15 PM - Error: An unexpected exception occured while printing the robot's current coordinates: Object reference not set to an instance of an object.
+2/22/2024 9:34:20 PM - Error: Invalid command: "set "
+2/22/2024 9:34:24 PM - Error: Invalid command: "set 12"
+2/22/2024 9:34:27 PM - Error: Invalid parameters in command: "set 1 2 a"
+2/22/2024 9:38:47 PM - Error: Invalid command. The default coordinates must be set first. Use SET x y z before.
+2/22/2024 9:48:22 PM - Error: Invalid command. The default coordinates must be set first. Use SET x y z before.
+2/22/2024 9:49:00 PM - Error: Unknown command: "move3d" Type "Help" to see a list of available commands.
+2/22/2024 9:49:42 PM - Error: Invalid command. Object would be placed out of bounds. Command: "3dmove -103 1 1"
+2/22/2024 9:56:34 PM - Error: Invalid command: "MOVE"
+2/22/2024 9:56:43 PM - Error: Invalid parameters in command: "move t 1"
+2/22/2024 9:56:50 PM - Error: Invalid parameters in command: "move z 1"
+2/22/2024 9:57:33 PM - Error: Invalid command. The default coordinates must be set first. Use SET x y z before.
