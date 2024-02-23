@@ -33,5 +33,6 @@ namespace Driving_A_Robot_WPF.Views
         {
             ConsoleHistoryTextBox.ScrollToEnd();
         }
+
     }
 }

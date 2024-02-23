@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "CP8yRADvBfp7w61Ph9Lo1QZiwU8qbt6xUCfX9axcQMTEyT4+4xq20AY7XmwQitsvfXWY1uCM8qmmIm1LX1w47A==",
+  "dgSpecHash": "IQMZs6dW1IzrpWjU3X9+vNOu4OoXmz2LpW7rMP8fguDoU7GPwuAcxbV9UTZw8odzjkEZwnVbDJ/5lABaKbcQng==",
   "success": true,
   "projectFilePath": "C:\\Users\\stefa\\Desktop\\Projects\\Driving-A-Robot-WPF\\Driving A Robot WPF\\Driving A Robot WPF\\Driving A Robot WPF.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\stefa\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
+  ],
   "logs": []
 }

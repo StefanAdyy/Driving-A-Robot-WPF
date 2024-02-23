@@ -1,10 +1,12 @@
 ﻿using Driving_A_Robot_WPF.Models;
 using Driving_A_Robot_WPF.ViewModels.Commands;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Driving_A_Robot_WPF.ViewModels
@@ -53,11 +55,12 @@ namespace Driving_A_Robot_WPF.ViewModels
 			}
 		}
 
-        public ICommand EnterCommand { get; }
+		public ICommand EnterCommand { get; }
 
-		public InputOutputViewModel(ThreeDimensionalSpaceModel threeDimensionalSpaceModel)
+        public InputOutputViewModel(ThreeDimensionalSpaceModel threeDimensionalSpaceModel)
 		{
 			EnterCommand = new EnterInstructionCommand(threeDimensionalSpaceModel, this);
 		}
+
     }
 }

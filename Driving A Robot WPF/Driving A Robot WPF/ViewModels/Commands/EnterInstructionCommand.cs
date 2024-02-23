@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Driving_A_Robot_WPF.ViewModels.Commands
 {
@@ -32,7 +33,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                 switch (commandTokens[0].ToLower())
                 {
                     case "quit":
-                        //????????????cum e mai bine
+                        Environment.Exit(0);
                         break;
 
                     case "help":

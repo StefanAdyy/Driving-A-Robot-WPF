@@ -22,3 +22,6 @@ C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving 
 C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.genruntimeconfig.cache
 C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\ref\Driving A Robot WPF.dll
 C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\bin\Debug\net6.0-windows\Prism.dll
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving A Robot WPF.csproj.AssemblyReference.cache
+C:\Users\stefa\Desktop\Projects\Driving-A-Robot-WPF\Driving A Robot WPF\Driving A Robot WPF\obj\Debug\net6.0-windows\Driving .407E67A3.Up2Date
