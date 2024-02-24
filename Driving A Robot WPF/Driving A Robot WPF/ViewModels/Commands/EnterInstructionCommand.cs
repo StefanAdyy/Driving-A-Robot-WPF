@@ -3,6 +3,7 @@ using Driving_A_Robot_WPF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -27,20 +28,21 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
 
             if (!string.IsNullOrWhiteSpace(_viewModel.ConsoleInput))
             {
-                char[] delimiterChars = { ' ', ',', '\t' };
-                string[] commandTokens = _viewModel.ConsoleInput.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
+                string command = _viewModel.ConsoleInput.Split(new char[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries)[0];
+                string commandParameters = _viewModel.ConsoleInput.Remove(0, _viewModel.ConsoleInput.IndexOf(command) + command.Length);
+                string[] commandTokens;
 
-                switch (commandTokens[0].ToLower())
+                switch (command, commandParameters.Trim(new char[] {' ', '\t'}).Length)
                 {
-                    case "quit":
+                    case ("quit", 0):
                         Environment.Exit(0);
                         break;
 
-                    case "help":
+                    case ("help", 0):
                         responseMessage = "Available commands: QUIT | SET x, y, z | RESET | MOVE axis, value | 3DMOVE ValueOnX, ValueOnY, ValueOnZ | PRINT";
                         break;
 
-                    case "print":
+                    case ("print", 0):
                         try
                         {
                             if (_threeDimensionalSpace.ObjectInSpace != null)
@@ -57,8 +59,10 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                         }
                         break;
 
-                    case "move":
-                        if (commandTokens.Length != 3)
+                    case ("move", > 0):
+                        commandTokens = commandParameters.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                        
+                        if (commandTokens.Length != 2)
                         {
                             responseMessage = $"Invalid command: \"{_viewModel.ConsoleInput}\"";
                             newConsoleHisoryLine += $"(INVALID) ";
@@ -69,9 +73,9 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             {
                                 double value;
 
-                                if (double.TryParse(commandTokens[1], out value))
+                                if (double.TryParse(commandTokens[0].Trim(), out value))
                                 {
-                                    _threeDimensionalSpace.MoveObject(value, commandTokens[2]);
+                                    _threeDimensionalSpace.MoveObject(value, commandTokens[1].Trim());
                                 }
                                 else
                                 {
@@ -105,8 +109,10 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             }
                         break;
 
-                    case "3dmove":
-                        if (commandTokens.Length != 4)
+                    case ("3dmove", > 0):
+                        commandTokens = commandParameters.Split(',');
+
+                        if (commandTokens.Length != 3)
                         {
                             responseMessage = $"Invalid command: \"{_viewModel.ConsoleInput}\"";
                             newConsoleHisoryLine += $"(INVALID) ";
@@ -117,9 +123,9 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             {
                                 double x, y, z;
 
-                                if (double.TryParse(commandTokens[1], out x) &&
-                                    double.TryParse(commandTokens[2], out y) &&
-                                    double.TryParse(commandTokens[3], out z))
+                                if (double.TryParse(commandTokens[0].Trim(), out x) &&
+                                    double.TryParse(commandTokens[1].Trim(), out y) &&
+                                    double.TryParse(commandTokens[2].Trim(), out z))
                                 {
                                     _threeDimensionalSpace.MoveObject(x, y, z);
                                 }
@@ -149,8 +155,10 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             }
                         break;
 
-                    case "set":
-                        if (commandTokens.Length != 4)
+                    case ("set", > 0):
+                        commandTokens = commandParameters.Split(',');
+
+                        if (commandTokens.Length != 3)
                         {
                             responseMessage = $"Invalid command: \"{_viewModel.ConsoleInput}\"";
                             newConsoleHisoryLine += $"(INVALID) ";
@@ -161,9 +169,9 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             {
                                 double x, y, z;
 
-                                if (double.TryParse(commandTokens[1], out x) &&
-                                    double.TryParse(commandTokens[2], out y) &&
-                                    double.TryParse(commandTokens[3], out z))
+                                if (double.TryParse(commandTokens[0].Trim(), out x) &&
+                                    double.TryParse(commandTokens[1].Trim(), out y) &&
+                                    double.TryParse(commandTokens[2].Trim(), out z))
                                 {
                                     PointModel coordinates = new PointModel(x, y, z);
 
@@ -201,39 +209,32 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             }
                         break;
 
-                    case "reset":
-                        if (commandTokens.Length != 1)
+                    case ("reset", 0):
+                        try
                         {
-                            responseMessage = $"Invalid command: \"{_viewModel.ConsoleInput}\"";
+                            _threeDimensionalSpace.ResetObjectPosition();
+                        }
+                        catch (ThreeDimensionalSpaceException.ObjectNullException)
+                        {
+                            responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
                             newConsoleHisoryLine += $"(INVALID) ";
                             Utils.Logger.LogError(responseMessage);
                         }
-                        else
-                            try
-                            {
-                                _threeDimensionalSpace.ResetObjectPosition();
-                            }
-                            catch (ThreeDimensionalSpaceException.ObjectNullException)
-                            {
-                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
-                                newConsoleHisoryLine += $"(INVALID) ";
-                                Utils.Logger.LogError(responseMessage);
-                            }
-                            catch (ThreeDimensionalSpaceException.UnsetDefaultCoordinates)
-                            {
-                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
-                                newConsoleHisoryLine += $"(INVALID) ";
-                                Utils.Logger.LogError(responseMessage);
-                            }
-                            catch (Exception ex)
-                            {
-                                responseMessage = $"An unexpected exception occured while resetting the robot's coordinates.";
-                                Utils.Logger.LogError($"An unexpected exception occured while resetting the robot's coordinates: {ex.Message}");
-                            }
+                        catch (ThreeDimensionalSpaceException.UnsetDefaultCoordinates)
+                        {
+                            responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
+                            newConsoleHisoryLine += $"(INVALID) ";
+                            Utils.Logger.LogError(responseMessage);
+                        }
+                        catch (Exception ex)
+                        {
+                            responseMessage = $"An unexpected exception occured while resetting the robot's coordinates.";
+                            Utils.Logger.LogError($"An unexpected exception occured while resetting the robot's coordinates: {ex.Message}");
+                        }
                         break;
 
                     default:
-                        responseMessage = $"Unknown command: \"{commandTokens[0]}\" Type \"Help\" to see a list of available commands.";
+                        responseMessage = $"Unknown command: \"{_viewModel.ConsoleInput}\" Type \"Help\" to see a list of available commands.";
                         newConsoleHisoryLine += $"(INVALID) ";
                         Utils.Logger.LogError(responseMessage);
                         break;
