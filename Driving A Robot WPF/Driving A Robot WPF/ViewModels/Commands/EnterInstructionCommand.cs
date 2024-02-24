@@ -80,19 +80,19 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                                     Utils.Logger.LogError(responseMessage);
                                 }
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectNullException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectNullException)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
+                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectPositionException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectPositionException)
                             {
                                 responseMessage = $"Invalid command. Object would be placed out of bounds. Command: \"{_viewModel.ConsoleInput}\"";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
-                            catch (ThreeDimensionalSpaceException.InvalidAxis ex)
+                            catch (ThreeDimensionalSpaceException.InvalidAxis)
                             {
                                 responseMessage = $"Invalid command. Input axis should be X, Y or Z. Command: \"{_viewModel.ConsoleInput}\"";
                                 newConsoleHisoryLine += $"(INVALID) ";
@@ -130,13 +130,13 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                                     Utils.Logger.LogError(responseMessage);
                                 }
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectNullException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectNullException)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
+                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectPositionException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectPositionException)
                             {
                                 responseMessage = $"Invalid command. Object would be placed out of bounds. Command: \"{_viewModel.ConsoleInput}\"";
                                 newConsoleHisoryLine += $"(INVALID) ";
@@ -166,9 +166,16 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                                     double.TryParse(commandTokens[3], out z))
                                 {
                                     PointModel coordinates = new PointModel(x, y, z);
-                                    RobotModel robot = new RobotModel();
-                                    _threeDimensionalSpace.ObjectInSpace = robot;
-                                    _threeDimensionalSpace.SetObjectDefaultPosition(coordinates);
+
+                                    if (_threeDimensionalSpace.ObjectInSpace != null)
+                                    {
+                                        _threeDimensionalSpace.SetObjectPosition(coordinates);
+                                    }
+                                    else
+                                    {
+                                        RobotModel robot = new RobotModel(coordinates);
+                                        _threeDimensionalSpace.ObjectInSpace = robot;
+                                    }
                                 }
                                 else
                                 {
@@ -177,11 +184,11 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                                     Utils.Logger.LogError(responseMessage);
                                 }
                             }
-                            catch (NullReferenceException ex)
+                            catch (NullReferenceException)
                             {
                                 Utils.Logger.LogError("Object to move does not exist");
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectPositionException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectPositionException)
                             {
                                 responseMessage = $"Invalid command. Object would be placed out of bounds. Command: \"{_viewModel.ConsoleInput}\"";
                                 newConsoleHisoryLine += $"(INVALID) ";
@@ -206,15 +213,15 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                             {
                                 _threeDimensionalSpace.ResetObjectPosition();
                             }
-                            catch (ThreeDimensionalSpaceException.ObjectNullException ex)
+                            catch (ThreeDimensionalSpaceException.ObjectNullException)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
+                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }
-                            catch (ThreeDimensionalSpaceException.UnsetDefaultCoordinates ex)
+                            catch (ThreeDimensionalSpaceException.UnsetDefaultCoordinates)
                             {
-                                responseMessage = $"Invalid command. The default coordinates must be set first. Use SET x, y, z before.";
+                                responseMessage = $"Invalid command. The object's position must be set first. Use SET x, y, z before.";
                                 newConsoleHisoryLine += $"(INVALID) ";
                                 Utils.Logger.LogError(responseMessage);
                             }

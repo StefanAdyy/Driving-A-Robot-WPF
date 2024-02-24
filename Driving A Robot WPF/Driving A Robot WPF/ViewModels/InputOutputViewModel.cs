@@ -61,6 +61,5 @@ namespace Driving_A_Robot_WPF.ViewModels
 		{
 			EnterCommand = new EnterInstructionCommand(threeDimensionalSpaceModel, this);
 		}
-
     }
 }

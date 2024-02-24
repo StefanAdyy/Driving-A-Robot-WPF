@@ -15,6 +15,5 @@ namespace Driving_A_Robot_WPF.ViewModels
         {
             CurrentViewModel = new InputOutputViewModel(threeDimensionalSpaceModel);
         }
-
     }
 }

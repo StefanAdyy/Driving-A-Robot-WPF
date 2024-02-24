@@ -16,7 +16,6 @@ namespace Driving_A_Robot_WPF.ViewModels
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
-            
         }
     }
 }

@@ -20,26 +20,27 @@ namespace Driving_A_Robot_WPF.Models
         public RangeModel YRange { get { return _yRange; } }
         public RangeModel ZRange { get { return _zRange; } }
         public PointModel DefaultCoordinates { get; set; }
-
         public RobotModel ObjectInSpace { get; set; }
 
-        public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, RobotModel robot = null)
+        public ThreeDimensionalSpaceModel(RangeModel xRange, RangeModel yRange, RangeModel zRange, PointModel defaultCoordinates = null, RobotModel robot = null)
         {
             _xRange = xRange;
             _yRange = yRange;
             _zRange = zRange;
+            DefaultCoordinates = defaultCoordinates;
             ObjectInSpace = robot;
         }
 
-        public ThreeDimensionalSpaceModel(string rangesFilePath, RobotModel robot = null)
+        public ThreeDimensionalSpaceModel(string rangesFilePath, PointModel defaultCoordinates = null, RobotModel robot = null)
         {
+            DefaultCoordinates = defaultCoordinates;
             ObjectInSpace = robot;
 
             try
             {
                 List<string> limits = FileUtils.ReadLinesFromFile(rangesFilePath);
 
-                if(limits.Count != 3) 
+                if (limits.Count != 3)
                 {
                     throw new RangeException.InvalidRangeFormatException("The file that should contain 3 lines with the axis and their limits");
                 }
@@ -87,16 +88,16 @@ namespace Driving_A_Robot_WPF.Models
             }
         }
 
-        public void SetObjectDefaultPosition(PointModel defaultCoordinates)
+        public void SetObjectPosition(PointModel coordinates)
         {
             if (ObjectInSpace == null)
                 throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized");
 
-            if (!XRange.HasInRange(defaultCoordinates.X) || !YRange.HasInRange(defaultCoordinates.Y) || !ZRange.HasInRange(defaultCoordinates.Z)) 
+            if (!XRange.HasInRange(coordinates.X) || !YRange.HasInRange(coordinates.Y) || !ZRange.HasInRange(coordinates.Z))
                 throw new ThreeDimensionalSpaceException.ObjectPositionException("Invalid move. Robot would go outside space bounds.");
 
-            DefaultCoordinates = new PointModel(defaultCoordinates.X, defaultCoordinates.Y, defaultCoordinates.Z) ;
-            ObjectInSpace.Coordinates = new PointModel(defaultCoordinates.X, defaultCoordinates.Y, defaultCoordinates.Z);
+            //DefaultCoordinates = new PointModel(coordinates.X, coordinates.Y, coordinates.Z) ;
+            ObjectInSpace.Coordinates = new PointModel(coordinates.X, coordinates.Y, coordinates.Z);
         }
 
         public void ResetObjectPosition()
@@ -107,7 +108,7 @@ namespace Driving_A_Robot_WPF.Models
             if (DefaultCoordinates == null)
                 throw new ThreeDimensionalSpaceException.UnsetDefaultCoordinates("Default coordinates are not initialized");
 
-            ObjectInSpace.Coordinates = DefaultCoordinates;
+            ObjectInSpace.Coordinates = new PointModel(DefaultCoordinates.X, DefaultCoordinates.Y, DefaultCoordinates.Z);
         }
 
         public void MoveObject(double value, string axis)
@@ -155,8 +156,8 @@ namespace Driving_A_Robot_WPF.Models
                 throw new ThreeDimensionalSpaceException.ObjectNullException("Object to move is not initialized.");
 
             if (XRange.HasInRange(valueOnX + ObjectInSpace.Coordinates.X) &&
-                   YRange.HasInRange(valueOnY + ObjectInSpace.Coordinates.Y) &&
-                   ZRange.HasInRange(valueOnZ + ObjectInSpace.Coordinates.Z))
+                YRange.HasInRange(valueOnY + ObjectInSpace.Coordinates.Y) &&
+                ZRange.HasInRange(valueOnZ + ObjectInSpace.Coordinates.Z))
             {
                 ObjectInSpace.Coordinates.X += valueOnX;
                 ObjectInSpace.Coordinates.Y += valueOnY;

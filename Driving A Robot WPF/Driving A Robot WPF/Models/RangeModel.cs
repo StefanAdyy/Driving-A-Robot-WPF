@@ -35,7 +35,8 @@ namespace Driving_A_Robot_WPF.Models
 
         public static RangeModel GetRangeFromString(string valuesString)
         {
-            string[] values = valuesString.Split(' ');
+            char[] delimiterChars = { ' ', ',', '\t' };
+            string[] values = valuesString.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
 
             if (values.Length != 2)
             {
@@ -46,7 +47,7 @@ namespace Driving_A_Robot_WPF.Models
             {
                 return new RangeModel(minValue, maxValue);
             }
-         
+
             throw new RangeException.InvalidRangeFormatException("Invalid values in the string.");
         }
 
