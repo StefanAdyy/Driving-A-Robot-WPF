@@ -1,13 +1,5 @@
 ﻿using Driving_A_Robot_WPF.Exceptions;
 using Driving_A_Robot_WPF.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace Driving_A_Robot_WPF.ViewModels.Commands
 {
@@ -243,7 +235,7 @@ namespace Driving_A_Robot_WPF.ViewModels.Commands
                 newConsoleHisoryLine += $"{_viewModel.ConsoleInput}";
             }
 
-            _viewModel.ConsoleHistory += $"\n{newConsoleHisoryLine}"; //strikethrough daca e (invalid)
+            _viewModel.ConsoleHistory += $"\n{newConsoleHisoryLine}";
             _viewModel.ConsoleInput = string.Empty;
             _viewModel.Output = responseMessage;
         }

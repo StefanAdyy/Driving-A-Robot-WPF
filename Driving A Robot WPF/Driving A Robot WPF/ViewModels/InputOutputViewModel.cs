@@ -1,12 +1,5 @@
 ﻿using Driving_A_Robot_WPF.Models;
 using Driving_A_Robot_WPF.ViewModels.Commands;
-using Prism.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Driving_A_Robot_WPF.ViewModels

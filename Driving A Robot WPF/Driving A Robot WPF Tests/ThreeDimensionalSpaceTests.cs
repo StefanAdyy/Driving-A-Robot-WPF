@@ -101,7 +101,5 @@ namespace Driving_A_Robot_WPF_Tests
             Assert.Throws<ThreeDimensionalSpaceException.ObjectPositionException>(() => threeDimensionalSpace.MoveObject(-30, -30, -30));
             Assert.Throws<ThreeDimensionalSpaceException.ObjectPositionException>(() => threeDimensionalSpace.MoveObject(-1, 11, 5));
         }
-
-
     }
 }

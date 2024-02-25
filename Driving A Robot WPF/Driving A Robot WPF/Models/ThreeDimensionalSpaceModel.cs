@@ -1,12 +1,6 @@
 ﻿using Driving_A_Robot_WPF.Exceptions;
 using Driving_A_Robot_WPF.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace Driving_A_Robot_WPF.Models
 {
