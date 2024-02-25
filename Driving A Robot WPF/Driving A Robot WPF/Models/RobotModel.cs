@@ -23,6 +23,8 @@ namespace Driving_A_Robot_WPF.Models
             Coordinates = coordinates;
         }
 
+        public RobotModel() { }
+
         public override string ToString()
         {
             return Coordinates.X.ToString() + ", " + Coordinates.Y.ToString() + ", " + Coordinates.Z.ToString();
